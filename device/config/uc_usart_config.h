@@ -1,0 +1,35 @@
+/*
+ * uc_usart_config.h
+ *
+ *  Created on: 08.02.2020
+ *      Author: Florian
+ */
+#include <fw_peripheralsconfig.h>
+
+
+#ifndef CONFIG_UC_USART_CONFIG_H_
+#define CONFIG_UC_USART_CONFIG_H_
+
+#define APB1_CLOCK					HSI_VALUE
+
+#define USART						DEBUG_USART
+#define USART_IRQ					DEBUG_USART_IRQ
+#define USART_IRQ_PRIO				DEBUG_USART_IRQ_PRIO
+#define USART_ISR					DEBUG_USART_ISR
+#define USART_BAUDRATE				70000
+
+#define DMA							DEBUG_USART_DMA
+#define DMA_CHANNEL_IRQ_PRIO		DEBUG_USART_DMA_CHANNEL_IRQ_PRIO
+#define DMA_TX_CHANNEL_IRQ			DEBUG_USART_DMA_CHANNEL_IRQ_TX
+#define DMA_TX_ISR					DEBUG_USART_DMA_ISR_TX
+#define DMA_RX_CHANNEL_IRQ			DEBUG_USART_DMA_CHANNEL_IRQ_RX
+#define DMA_RX_ISR					DEBUG_USART_DMA_ISR_RX
+
+
+#define	DEBUG_UART_TX_PORT			GPIOD
+#define	DEBUG_UART_TX_PIN			5
+#define	DEBUG_UART_RX_PORT			GPIOD
+#define	DEBUG_UART_RX_PIN			6
+#define	DEBUG_UART_AF				7
+
+#endif /* CONFIG_UC_USART_CONFIG_H_ */
