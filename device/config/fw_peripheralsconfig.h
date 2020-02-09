@@ -11,19 +11,25 @@
 #define GREEN_LED_PORT 		GPIOG
 #define GREEN_LED_PIN 		13
 
+/******************************************************************
+********************* DEBUG UART **********************************
+******************************************************************/
+#define DEBUG_USART						USART2
 
-#define DEBUG_USART								USART2
-#define DEBUG_USART_IRQ							USART2_IRQn
-#define DEBUG_USART_IRQ_PRIO					15
-#define DEBUG_USART_ISR							USART2_IRQHandler
+#define	DEBUG_UART_TX_PORT				GPIOD
+#define	DEBUG_UART_TX_PIN				5
+#define	DEBUG_UART_RX_PORT				GPIOD
+#define	DEBUG_UART_RX_PIN				6
 
-#define DEBUG_USART_DMA							DMA1
-#define DEBUG_USART_DMA_CHANNEL_IRQ_PRIO		15
-#define DEBUG_USART_DMA_CHANNEL_IRQ_TX			DMA1_Stream6_IRQn
-#define DEBUG_USART_DMA_ISR_TX					DMA1_Stream6_IRQHandler
-#define DEBUG_USART_DMA_CHANNEL_IRQ_RX			DMA1_Stream5_IRQn
-#define DEBUG_USART_DMA_ISR_RX					DMA1_Stream5_IRQHandler
+#define DEBUG_USART_DMA					DMA1
+// TX
+#define DEBUG_USART_DMA_TX				DMA1_Stream6
+// RX
+#define DEBUG_USART_DMA_RX				DMA1_Stream5
 
+/******************************************************************
+*******************************************************************
+******************************************************************/
 
 
 
