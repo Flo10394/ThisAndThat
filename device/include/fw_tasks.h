@@ -22,6 +22,12 @@ OS_TASK 			UsartTask_Task;
 #define 			UsartTaskPrio 100
 extern void UsartTask(void);
 
+// LED Multiplexter TASK
+OS_STACKPTR int 	LedMultiplexTaskStack[128];
+OS_TASK 			LedMultiplexTask_Task;
+#define 			LedMultiplexTaskPrio 100
+extern void LedMultiplexTask(void);
+
 
 
 #endif /* FW_TASKS_H_ */

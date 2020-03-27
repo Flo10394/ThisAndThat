@@ -50,6 +50,11 @@
 			<location>C:/Users/Florian/Desktop/Codap/uc/stm32f4xx/uc_gpio.h</location>
 		</link>
 		<link>
+			<name>uc/uc_spi.c</name>
+			<type>1</type>
+			<location>C:/Users/Florian/Desktop/Codap/uc/stm32f4xx/uc_spi.c</location>
+		</link>
+		<link>
 			<name>uc/uc_usartc.c</name>
 			<type>1</type>
 			<location>C:/Users/Florian/Desktop/Codap/uc/stm32f4xx/uc_uartc.c</location>

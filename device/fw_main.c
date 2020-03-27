@@ -41,6 +41,8 @@ int main(void) {
 
 	OS_TASK_CREATE(&UsartTask_Task, "UsartTask", UsartTaskPrio, UsartTask, UsartTaskStack);
 
+	OS_TASK_CREATE(&LedMultiplexTask_Task, "LedMultiplexTask", LedMultiplexTaskPrio, LedMultiplexTask, LedMultiplexTaskStack);
+
 	OS_Start(); // Start embOS
 
 	return 0;
