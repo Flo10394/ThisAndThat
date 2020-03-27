@@ -22,9 +22,7 @@
 #define	DEBUG_UART_RX_PIN				6
 
 #define DEBUG_USART_DMA					DMA1
-// TX
 #define DEBUG_USART_DMA_TX				DMA1_Stream6
-// RX
 #define DEBUG_USART_DMA_RX				DMA1_Stream5
 
 /******************************************************************

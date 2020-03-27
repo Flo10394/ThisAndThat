@@ -17,7 +17,7 @@ OS_TASK 			BlinkTask_Task;
 extern void BlinkTask(void);
 
 // USART TASK
-OS_STACKPTR int 	UsartTaskStack[128];
+OS_STACKPTR int 	UsartTaskStack[512];
 OS_TASK 			UsartTask_Task;
 #define 			UsartTaskPrio 100
 extern void UsartTask(void);

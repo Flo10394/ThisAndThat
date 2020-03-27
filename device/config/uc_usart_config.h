@@ -54,5 +54,7 @@
 #define USART_DMA_RX_CTCIF_BITMASK		(1 << 11)
 
 
+#define	USE_PRINTF						1
+
 
 #endif /* CONFIG_UC_USART_CONFIG_H_ */

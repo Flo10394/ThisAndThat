@@ -15,8 +15,6 @@
 #include <stdio.h>
 
 
-uint8_t SendUartDma(const char * str, uint32_t size);
-
 /****** Task function ***********************************************/
 extern void UsartTask(void)
 {
@@ -24,10 +22,10 @@ extern void UsartTask(void)
 
 	while(1)
 	{
-		const char str[] = "Hello STM32F4";
+		const char str[] = "Hello STM32F4\n";
 
-		UC_USART_sendString(str, sizeof(str));
-		OS_Delay(100);
+//		printf(str);
+		OS_Delay(5000);
 	}
 
 }
