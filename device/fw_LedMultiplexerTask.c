@@ -5,9 +5,12 @@
  *      Author: Florian
  */
 
-
+#include <RTOS.h>
 
 extern void LedMultiplexTask(void)
 {
-
+	while(1)
+	{
+		OS_Delay(1000);
+	}
 }
