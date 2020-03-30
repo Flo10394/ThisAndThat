@@ -23,16 +23,8 @@ int main(void) {
 	MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE1, 0); // APB1 Prescaler = 1
 	enableGPIOClocks();
 
-	//PC9 = MCO2
-//	UC_GPIO_setOutputPushPullAlternateFunction(GPIOC, 9);
-//	UC_GPIO_setAlternateFunction(GPIOC, 9, 0);
-//	UC_GPIO_setSpeedHigh(GPIOC, 9);
-//	MODIFY_REG(RCC->CFGR, (3 << 30), 0); // Select Systemclock as MCO2
-//	MODIFY_REG(RCC->CFGR, (3 << 7), 0); // MCO2 div = 5
-
-
-	RCC->APB1ENR |= (1 << 17); // Enable USART2 Clock
-	RCC->AHB1ENR |= (1 << 21); // Enable DMA1 Clock
+	RCC->APB1ENR |= RCC_APB1ENR_UART5EN;
+	RCC->AHB1ENR |= RCC_AHB1ENR_DMA1EN; // Enable DMA1 Clock
 
 	OS_Init(); // Initialize embOS
 	OS_InitHW(); // Initialize required hardware

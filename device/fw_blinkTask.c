@@ -13,7 +13,8 @@
 extern void BlinkTask(void)
 {
 	// Green LED PG13
-	UC_GPIO_setOutputPushPull(GREEN_LED_PORT, GREEN_LED_PIN);
+	UC_GPIO_setModeOutput(GREEN_LED_PORT, GREEN_LED_PIN);
+	UC_GPIO_setOutputTypePushPull(GREEN_LED_PORT, GREEN_LED_PIN);
 	UC_GPIO_setSpeedLow(GREEN_LED_PORT, GREEN_LED_PIN);
 
 	while(1)
