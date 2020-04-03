@@ -17,10 +17,14 @@ OS_TASK 			BlinkTask_Task;
 extern void BlinkTask(void);
 
 // USART TASK
-OS_STACKPTR int 	UsartTaskStack[512];
+OS_STACKPTR int 	UsartTaskStack[1024];
 OS_TASK 			UsartTask_Task;
 #define 			UsartTaskPrio 100
 extern void UsartTask(void);
+#define 			USART_MESSAGE_RECEIVED (1u << 0)
+extern void 		USART_Message_received(void);
+
+
 
 // LED Multiplexter TASK
 OS_STACKPTR int 	LedMultiplexTaskStack[128];

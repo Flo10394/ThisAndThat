@@ -35,6 +35,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>util</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>uc/include</name>
 			<type>2</type>
 			<location>C:/Users/Florian/Desktop/Codap/uc/include</location>
@@ -55,9 +60,19 @@
 			<location>C:/Users/Florian/Desktop/Codap/uc/stm32f4xx/uc_spi.c</location>
 		</link>
 		<link>
-			<name>uc/uc_usartc.c</name>
+			<name>uc/uc_usart.c</name>
 			<type>1</type>
-			<location>C:/Users/Florian/Desktop/Codap/uc/stm32f4xx/uc_uartc.c</location>
+			<location>C:/Users/Florian/Desktop/Codap/uc/stm32f4xx/uc_usart.c</location>
+		</link>
+		<link>
+			<name>util/include</name>
+			<type>2</type>
+			<location>C:/Users/Florian/Desktop/Codap/util/include</location>
+		</link>
+		<link>
+			<name>util/util_ringbuffer_u8.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Codap/util/u8_ringbuffer.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
