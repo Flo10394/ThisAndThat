@@ -67,11 +67,11 @@ int _write(int file, char *ptr, int len);
 *    This function will be called by its reentrant version '_write_r'
 *    which is contained in libc.
 */
-int _write(int file, char *ptr, int len) {
-  (void) file;  /* Not used, avoid warning */
-  SEGGER_RTT_Write(0, ptr, len);
-  return len;
-}
+//int _write(int file, char *ptr, int len) {
+//  (void) file;  /* Not used, avoid warning */
+//  SEGGER_RTT_Write(0, ptr, len);
+//  return len;
+//}
 
 #endif
 
