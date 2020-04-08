@@ -24,6 +24,11 @@ extern void UsartTask(void);
 #define 			USART_MESSAGE_RECEIVED (1u << 0)
 extern void 		USART_Message_received(void);
 
+// SPI TASK
+OS_STACKPTR int 	SpiTaskStack[256];
+OS_TASK 			Spi_Task;
+#define 			SpiTaskPrio 100
+extern void SpiTask(void);
 
 
 // LED Multiplexter TASK

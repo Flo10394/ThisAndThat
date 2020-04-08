@@ -8,6 +8,8 @@
 #ifndef CONFIG_FW_PERIPHERALSCONFIG_H_
 #define CONFIG_FW_PERIPHERALSCONFIG_H_
 
+#include <stm32f4xx.h>
+
 #define GREEN_LED_PORT 		GPIOG
 #define GREEN_LED_PIN 		13
 
