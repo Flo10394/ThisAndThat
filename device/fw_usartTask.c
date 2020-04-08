@@ -28,8 +28,9 @@ extern void UsartTask(void)
 	while(1)
 	{
 		OS_TASKEVENT_GetBlocked(USART_MESSAGE_RECEIVED);
-		const char str[] = "I received a message, yeah\n";
-		printf(str);
+		char str[100];
+		UC_USART_getMessage(str, 100);
+		printf("Hey your Message was: %s\n", str);
 	}
 
 }
