@@ -247,7 +247,9 @@ __Vectors:
   .word     CRYP_IRQHandler                   /* CRYP crypto                  */                   
   .word     HASH_RNG_IRQHandler               /* Hash and Rng                 */
   .word     FPU_IRQHandler                    /* FPU                          */
-                         
+  .word		UART7_IRQHandler
+  .word		UART8_IRQHandler
+  .word		SPI4_IRQHandler
                          
 /*******************************************************************************
 *
@@ -527,6 +529,15 @@ __Vectors:
    .thumb_set HASH_RNG_IRQHandler,Default_Handler   
 
    .weak      FPU_IRQHandler                  
-   .thumb_set FPU_IRQHandler,Default_Handler  
+   .thumb_set FPU_IRQHandler,Default_Handler
+
+   .weak      UART7_IRQHandler
+   .thumb_set UART7_IRQHandler,Default_Handler
+
+   .weak      UART8_IRQHandler
+   .thumb_set UART8_IRQHandler,Default_Handler
+
+   .weak      SPI4_IRQHandler
+   .thumb_set SPI4_IRQHandler,Default_Handler
 
 

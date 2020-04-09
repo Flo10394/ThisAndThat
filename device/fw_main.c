@@ -11,8 +11,6 @@
 #include <uc_gpio.h>
 #include <fw_tasks.h>
 
-
-
 static void enableGPIOClocks(void);
 
 int main(void) {
@@ -21,10 +19,12 @@ int main(void) {
 	MODIFY_REG(RCC->CFGR, 0x2, 0); // Select HSI Clock as Sysclock (16 MHz) = quick & dirty for embOS
 	MODIFY_REG(RCC->CFGR, RCC_CFGR_HPRE, 0);
 	MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE1, 0); // APB1 Prescaler = 1
+	MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE1, 0); // APB1 Prescaler = 1
 	enableGPIOClocks();
 
-	RCC->APB1ENR |= RCC_APB1ENR_UART5EN;
+	RCC->APB1ENR |= RCC_APB1ENR_UART5EN; // Enable UART5 Clock
 	RCC->AHB1ENR |= RCC_AHB1ENR_DMA1EN; // Enable DMA1 Clock
+	SET_BIT(RCC->APB2ENR, RCC_APB2ENR_SPI4EN); //Enable SPI4 Clock
 
 	OS_Init(); // Initialize embOS
 	OS_InitHW(); // Initialize required hardware
@@ -33,7 +33,9 @@ int main(void) {
 
 	OS_TASK_CREATE(&UsartTask_Task, "UsartTask", UsartTaskPrio, UsartTask, UsartTaskStack);
 
-	OS_TASK_CREATE(&LedMultiplexTask_Task, "LedMultiplexTask", LedMultiplexTaskPrio, LedMultiplexTask, LedMultiplexTaskStack);
+	OS_TASK_CREATE(&Spi_Task, "SpiTask", SpiTaskPrio, SpiTask, SpiTaskStack);
+
+//	OS_TASK_CREATE(&LedMultiplexTask_Task, "LedMultiplexTask", LedMultiplexTaskPrio, LedMultiplexTask, LedMultiplexTaskStack);
 
 	OS_Start(); // Start embOS
 

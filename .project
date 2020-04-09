@@ -25,6 +25,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>driver</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>os</name>
 			<type>2</type>
 			<location>C:/Users/Florian/Desktop/Codap/os</location>
@@ -38,6 +43,16 @@
 			<name>util</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>driver/drv_max7219_8x8.c</name>
+			<type>1</type>
+			<location>C:/Users/Florian/Desktop/Codap/driver/drv_max7219_8x8.c</location>
+		</link>
+		<link>
+			<name>driver/include</name>
+			<type>2</type>
+			<location>C:/Users/Florian/Desktop/Codap/driver/include</location>
 		</link>
 		<link>
 			<name>uc/include</name>
