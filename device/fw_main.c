@@ -11,8 +11,6 @@
 #include <uc_gpio.h>
 #include <fw_tasks.h>
 
-
-
 static void enableGPIOClocks(void);
 
 int main(void) {

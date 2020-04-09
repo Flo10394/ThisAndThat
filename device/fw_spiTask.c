@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <fw_tasks.h>
-#include <uc_spi.h>
+#include <drv_max7219_8x8.h>
 
 /***********************************************************
 					configuration options
@@ -51,14 +51,17 @@
 ***********************************************************/
 extern void SpiTask(void)
 {
-	UC_SPI_init();
+	DRV_MAX7219_8x8_init();
 
-	while(1)
-	{
-		uint8_t byte = 0x55;
-		UC_SPI_sendByte(byte);
-		OS_Delay(3);
-	}
+	static ledMatrix leds;
+//	memset(leds, 0, 64);
+	leds[0][0] = 1;
+	leds[1][1] = 1;
+	leds[2][2] = 1;
+
+	DRV_MAX7219_8x8_clear();
+
+	DRV_MAX7219_8x8_setLED(&leds);
 
 }
 
